@@ -1,0 +1,53 @@
+____________________________________________________________________________________
+P2-AutomationTesting
+====================================================================================
+You can run tests either by PyCharm or Command Line.
+====================================================================================
+1. Install PyCharm and open the project P2-AutomationTesting as your project
+====================================================================================
+*Make sure that P2-Automation is your current working directory
+in PyCharm or else the path of chromedriver will not be detected
+automatically.
+*To this goto: Run->Edit-configurations-> then set working directory as P2-AutomationTesting
+
+*Make sure you have selected the correct python interpreter and
+also check that the python interpreter consists of selenium package.
+
+*To check this goto: File->Settings->Project:P2-AutomationTesting->Project Interpreter
+now select existing interpreter from venv/bin/python3.6 from directory.
+
+*if selenium is not present in the list you can also add it from
+the upper right side of settings window.
+just click it and enter 'selenium'.
+
+*to run test: run file reportViewTest
+*for running individual tests click run button beside the test.
+
+=====================================================================================
+2. Command Line
+=====================================================================================
+
+
+1: Enter the folder P2-AutomationTesting:
+you will have two folders. Namely Drivers and POM.
+
+2: In same directory create a virtual environment with following command:
+virtualenv <name of environment'>
+
+3: Activate your environment:
+source <name of environment>/bin/activate
+
+4: Install python:
+sudo apt-get install python3.6
+
+5: Install pip:
+sudo apt install python3-pip
+
+6: Install Selenium:
+sudo pip3 install selenium
+
+7: To run the test from command line:
+python3 -m unittest POM.Tests.reportViewTest.ReportViewTest
+
+8:To run single test from command line:
+python -m unittest POM.Tests.reportViewTest.ReportViewTest.<test name>
